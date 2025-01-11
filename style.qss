@@ -1,0 +1,137 @@
+
+
+
+/* 应用整体样式 */
+QWidget {
+    background-color: #f0f0f0; /* 设置窗口背景颜色 */
+    font-family: "幼圆"; /* 设置字体 */
+    font-size: 14pt; /* 设置字体大小 */
+}
+
+QLabel#label {
+    color: black; /* 文字颜色 */
+    font-size: 24px; /* 字体大小 */
+    font-weight: bold; /* 设置按钮文本为粗体 */
+}
+
+
+
+
+/* 按钮样式 */
+QPushButton {
+    background-color: #C2C2C2; /* 按钮背景颜色 */
+    color: black; /* 按钮文字颜色 */
+    border: none; /* 去掉边框 */
+    padding: 10px 20px; /* 设置内边距 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 去掉下划线 */
+    display: inline-block; /* 行内块元素 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 2px; /* 外边距 */
+    cursor: pointer; /* 鼠标悬停时的光标样式 */
+    border-radius: 5px; /* 边角圆角 */
+}
+
+QPushButton:hover {
+    background-color: #717171; /* 鼠标悬停时的背景颜色 */
+}
+
+QPushButton:pressed {
+    background-color: #4B4C4E; /* 按钮按下时的背景颜色 */
+}
+
+/* 文本输入框样式 */
+QLineEdit {
+    background-color: white; /* 输入框背景颜色 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 边角圆角 */
+    padding: 5px; /* 内边距 */
+}
+
+QLineEdit:focus {
+    border-color: #66afe9; /* 获得焦点时的边框颜色 */
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6); /* 获得焦点时的阴影效果 */
+}
+
+/* 标签样式 */
+QLabel {
+    color: #333; /* 标签文字颜色 */
+    font-weight: bold; /* 字体加粗 */
+}
+
+/* 列表控件样式 */
+QListWidget {
+    background-color: #fff; /* 列表背景颜色 */
+    border: 1px solid #ddd; /* 边框样式 */
+}
+
+QListWidget::item {
+    padding: 8px; /* 列表项内边距 */
+}
+
+QListWidget::item:selected {
+    background-color: #b3d4fc; /* 选中项背景颜色 */
+    color: black; /* 选中项文字颜色 */
+}
+
+/* 下拉菜单样式 */
+QComboBox {
+    background-color: white; /* 下拉框背景颜色 */
+    border: 1px solid #ccc; /* 边框样式 */
+    border-radius: 4px; /* 边角圆角 */
+    padding: 5px; /* 内边距 */
+}
+
+QComboBox QAbstractItemView {
+    background-color: white; /* 下拉列表背景颜色 */
+    border: 1px solid #ccc; /* 下拉列表边框样式 */
+}
+
+/* 滑动条样式 */
+QSlider::groove:horizontal {
+    background: #323232; /* 滑动条轨道颜色 */
+    height: 8px; /* 轨道高度 */
+    border-radius: 4px; /* 轨道圆角 */
+}
+
+QSlider::handle:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #b4b4b4, stop:1 #8f8f8f); /* 滑块颜色渐变 */
+    border: 1px solid #5c5c5c; /* 滑块边框样式 */
+    width: 18px; /* 滑块宽度 */
+    margin: -2px 0; /* 滑块外边距 */
+    border-radius: 9px; /* 滑块圆角 */
+}
+
+/* 进度条样式 */
+QProgressBar {
+    border: 2px solid grey; /* 边框样式 */
+    border-radius: 5px; /* 边角圆角 */
+    text-align: center; /* 文字居中 */
+}
+
+QProgressBar::chunk {
+    background-color: #87A9E7; /* 进度条填充颜色 */
+    width: 20px; /* 进度条填充块宽度 */
+}
+
+
+QTabWidget::tab-bar {
+    alignment: center; /* 标签页居中对齐 */
+}
+
+QTabBar::tab {
+    background: #f0f0f0; /* 标签页背景颜色 */
+    border: 1px solid #ccc; /* 标签页边框颜色 */
+    border-radius: 4px; /* 标签页圆角大小 */
+    padding: 4px 8px; /* 标签页内边距 */
+    margin: 2px; /* 标签页外边距 */
+}
+
+QTabBar::tab:selected {
+    background: #e0e0e0; /* 选中标签页的背景颜色 */
+    border-color: #999; /* 选中标签页的边框颜色 */
+}
+
+QTabBar::tab:hover {
+    background: #d0d0d0; /* 鼠标悬停时标签页的背景颜色 */
+}
