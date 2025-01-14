@@ -4,7 +4,7 @@
 
 
 #显示ui
-import main_win
+import win
 import sys
 import time
 
@@ -48,7 +48,7 @@ def update_time(label):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     MainWindow = QMainWindow()
-    ui = main_win.Ui_MainWindow()
+    ui = win.Ui_MainWindow()
     ui.setupUi(MainWindow)
 
     # qss
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     MainWindow.setStyleSheet(style_sheet)
 
     # 槽函数
-    ui.pushButton_dataset_dir.clicked.connect(Select_a_single_directory)
+    ui.pushButton_seg_img_dir.clicked.connect(Select_a_single_directory)
     # 创建定时器
     timer = QTimer()
     timer.timeout.connect(lambda: update_time(ui.label_time))  # 连接定时器的 timeout 信号到 update_time 函数
@@ -66,5 +66,3 @@ if __name__ == '__main__':
 
     MainWindow.show()
     sys.exit(app.exec_())
-
-

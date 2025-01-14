@@ -14,6 +14,10 @@ QLabel#label {
     font-weight: bold; /* 设置按钮文本为粗体 */
 }
 
+QLabel#label_remote_state {
+    color: green; /* 文字颜色 */
+}
+
 
 
 
