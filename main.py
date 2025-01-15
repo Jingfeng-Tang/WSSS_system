@@ -15,6 +15,8 @@ import csv
 import re
 from PyQt5.Qt import QFileDialog
 from qt_material import apply_stylesheet
+import os
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 class QSSLoader:
     def __init__(self):
@@ -43,6 +45,29 @@ def update_time(label):
     # 更新 QLabel 的文本
     label.setText(time_display)
 
+def load_images(ui, folder_path):
+    # 获取文件夹中的所有图片文件
+    image_files = [f for f in os.listdir(folder_path) if f.endswith(('.png', '.jpg', '.jpeg', '.bmp'))]
+
+    row = 0
+    col = 0
+    max_cols = 4  # 每行显示 3 张图片
+    ui.scroll_layout = QGridLayout(ui.scrollAreaWidgetContents_4)
+
+    for image_file in image_files:
+        # 创建 QLabel 并设置图片
+        # label_preview_dataset = QtWidgets.Qlabel()
+        label_preview_dataset = QtWidgets.QLabel(ui.tab_2)
+        pixmap = QPixmap(os.path.join(folder_path, image_file))
+        label_preview_dataset.setPixmap(pixmap.scaled(200, 200, Qt.KeepAspectRatio))  # 设置图片大小
+
+        # 将 QLabel 添加到布局中
+        ui.scroll_layout.addWidget(label_preview_dataset, row, col)
+
+        col += 1
+        if col >= max_cols:
+            col = 0
+            row += 1
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
@@ -62,6 +87,9 @@ if __name__ == '__main__':
     timer = QTimer()
     timer.timeout.connect(lambda: update_time(ui.label_time))  # 连接定时器的 timeout 信号到 update_time 函数
     timer.start(1000)  # 每隔1秒更新一次时间
+
+    load_images(ui, 'E:\datasets\pascalvoc\\atest')
+    # load_images(ui, 'E:\datasets\pascalvoc\JPEGImages')
 
 
     MainWindow.show()

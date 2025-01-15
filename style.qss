@@ -5,12 +5,12 @@
 QWidget {
     background-color: #f0f0f0; /* 设置窗口背景颜色 */
     font-family: "幼圆"; /* 设置字体 */
-    font-size: 14pt; /* 设置字体大小 */
+    font-size: 24pt; /* 设置字体大小 */
 }
 
 QLabel#label {
     color: black; /* 文字颜色 */
-    font-size: 24px; /* 字体大小 */
+    font-size: 48px; /* 字体大小 */
     font-weight: bold; /* 设置按钮文本为粗体 */
 }
 

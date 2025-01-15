@@ -32,7 +32,7 @@
          </font>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="tab_6">
          <attribute name="title">
@@ -319,20 +319,24 @@ p, li { white-space: pre-wrap; }
               </property>
              </widget>
             </item>
+            <item row="3" column="0">
+             <widget class="QScrollArea" name="scrollArea_4">
+              <property name="widgetResizable">
+               <bool>true</bool>
+              </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents_4">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>1061</width>
+                 <height>458</height>
+                </rect>
+               </property>
+              </widget>
+             </widget>
+            </item>
            </layout>
-          </item>
-          <item row="1" column="0">
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
@@ -341,10 +345,17 @@ p, li { white-space: pre-wrap; }
           <string>训练</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_7">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_13">
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_9">
             <property name="text">
-             <string>训练输出路径</string>
+             <string>训练进度</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QProgressBar" name="progressBar">
+            <property name="value">
+             <number>34</number>
             </property>
            </widget>
           </item>
@@ -355,18 +366,64 @@ p, li { white-space: pre-wrap; }
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
-           <widget class="QProgressBar" name="progressBar">
-            <property name="value">
-             <number>0</number>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>训练输出路径</string>
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_9">
-            <property name="text">
-             <string>训练进度</string>
+          <item row="4" column="0">
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1063</width>
+               <height>350</height>
+              </rect>
+             </property>
+             <widget class="QTextEdit" name="textEdit_2">
+              <property name="geometry">
+               <rect>
+                <x>3</x>
+                <y>0</y>
+                <width>1061</width>
+                <height>351</height>
+               </rect>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="html">
+               <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Arial'; font-size:15pt; font-weight:600; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 20/165]  eta: 0:04:53  lr: 0.000001  cls_loss: 0.6826 (0.6827)  nce_loss: 4.2841 (4.2922)  loss: 2.3972 (2.3996)  time: 1.6105  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 30/165]  eta: 0:04:11  lr: 0.000001  cls_loss: 0.6813 (0.6820)  nce_loss: 4.1919 (4.2499)  loss: 2.3583 (2.3820)  time: 1.5315  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 40/165]  eta: 0:03:47  lr: 0.000001  cls_loss: 0.6801 (0.6814)  nce_loss: 4.1127 (4.2101)  loss: 2.3246 (2.3654)  time: 1.6041  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 50/165]  eta: 0:03:24  lr: 0.000001  cls_loss: 0.6784 (0.6807)  nce_loss: 4.0418 (4.1757)  loss: 2.2938 (2.3509)  time: 1.6507  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 60/165]  eta: 0:03:02  lr: 0.000001  cls_loss: 0.6770 (0.6800)  nce_loss: 4.0034 (4.1427)  loss: 2.2785 (2.3370)  time: 1.5777  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 70/165]  eta: 0:02:42  lr: 0.000001  cls_loss: 0.6755 (0.6792)  nce_loss: 3.9407 (4.1119)  loss: 2.2516 (2.3240)  time: 1.5295  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 80/165]  eta: 0:02:23  lr: 0.000001  cls_loss: 0.6736 (0.6784)  nce_loss: 3.8932 (4.0815)  loss: 2.2304 (2.3110)  time: 1.5457  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [ 90/165]  eta: 0:02:06  lr: 0.000001  cls_loss: 0.6723 (0.6776)  nce_loss: 3.8376 (4.0531)  loss: 2.2061 (2.2989)  time: 1.5853  data: 0.0001  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [100/165]  eta: 0:01:48  lr: 0.000001  cls_loss: 0.6700 (0.6768)  nce_loss: 3.8029 (4.0261)  loss: 2.1920 (2.2872)  time: 1.5866  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epoch: [19]  [110/165]  eta: 0:01:31  lr: 0.000001  cls_loss: 0.6679 (0.6759)  nce_loss: 3.7579 (3.9986)  loss: 2.1709 (2.2753)  time: 1.5563  data: 0.0002  max mem: 0&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </widget>
            </widget>
           </item>
           <item row="8" column="0">
@@ -397,45 +454,13 @@ p, li { white-space: pre-wrap; }
           <item row="1" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
-             <widget class="QLineEdit" name="lineEdit_2"/>
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="text">
+               <string>/data/c425/tjf/mct_mod33/results</string>
+              </property>
+             </widget>
             </item>
            </layout>
-          </item>
-          <item row="4" column="0">
-           <widget class="QScrollArea" name="scrollArea">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="widgetResizable">
-             <bool>true</bool>
-            </property>
-            <widget class="QWidget" name="scrollAreaWidgetContents">
-             <property name="geometry">
-              <rect>
-               <x>0</x>
-               <y>0</y>
-               <width>1063</width>
-               <height>171</height>
-              </rect>
-             </property>
-            </widget>
-           </widget>
-          </item>
-          <item row="10" column="0">
-           <spacer name="verticalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
