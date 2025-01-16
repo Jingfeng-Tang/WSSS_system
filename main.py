@@ -28,6 +28,14 @@ class QSSLoader:
             return file.read()
 
 
+def select_a_single_file():
+    # 弹出文件选择对话框，让用户选择一个文件
+    file_path, _ = QFileDialog.getOpenFileName(None, "选择文件", "C:/", "All Files (*);;Text Files (*.txt)")
+
+    if file_path:
+        print("选择的文件路径：", file_path)
+    else:
+        print("未选择文件！")
 
 def Select_a_single_directory():
     dir_path = QFileDialog.getExistingDirectory(None, "选择目录", "C:/", QFileDialog.ShowDirsOnly)
@@ -82,7 +90,7 @@ if __name__ == '__main__':
     MainWindow.setStyleSheet(style_sheet)
 
     # 槽函数
-    ui.pushButton_seg_img_dir.clicked.connect(Select_a_single_directory)
+    ui.pushButton_seg_img_dir.clicked.connect(select_a_single_file)
     # 创建定时器
     timer = QTimer()
     timer.timeout.connect(lambda: update_time(ui.label_time))  # 连接定时器的 timeout 信号到 update_time 函数
@@ -90,6 +98,15 @@ if __name__ == '__main__':
 
     load_images(ui, 'E:\datasets\pascalvoc\\atest')
     # load_images(ui, 'E:\datasets\pascalvoc\JPEGImages')
+    # 加载图像
+    pixmap = QPixmap('E:\datasets\stochastic_img/person_plane.jpg')
+    pixmap_pre = QPixmap('E:\datasets\stochastic_img/person_plane_pre.png')
+
+    # 将图像设置到QLabel控件中
+    ui.label_oriimg.setPixmap(pixmap)
+    # ui.label_oriimg.setScaledContents(True)
+    ui.label_pred.setPixmap(pixmap_pre)
+    # ui.label_pred.setScaledContents(True)
 
 
     MainWindow.show()
