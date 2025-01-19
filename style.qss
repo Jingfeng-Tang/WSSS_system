@@ -30,7 +30,7 @@ QPushButton {
     text-align: center; /* 文字居中 */
     text-decoration: none; /* 去掉下划线 */
     display: inline-block; /* 行内块元素 */
-    font-size: 16px; /* 字体大小 */
+    font-size: 24px; /* 字体大小 */
     margin: 4px 2px; /* 外边距 */
     cursor: pointer; /* 鼠标悬停时的光标样式 */
     border-radius: 5px; /* 边角圆角 */

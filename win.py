@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1109, 800)
+        MainWindow.resize(846, 800)
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/logo/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
@@ -84,29 +84,31 @@ class Ui_MainWindow(object):
         self.gridLayout_5.setObjectName("gridLayout_5")
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
+        self.label_2 = QtWidgets.QLabel(self.tab)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
         self.label_3 = QtWidgets.QLabel(self.tab)
         self.label_3.setObjectName("label_3")
         self.gridLayout_2.addWidget(self.label_3, 2, 0, 1, 1)
+        self.scrollArea_3 = QtWidgets.QScrollArea(self.tab)
+        self.scrollArea_3.setWidgetResizable(True)
+        self.scrollArea_3.setObjectName("scrollArea_3")
+        self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 798, 469))
+        self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
+        self.gridLayout_13 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_3)
+        self.gridLayout_13.setObjectName("gridLayout_13")
+        self.textEdit = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_3)
+        self.textEdit.setReadOnly(True)
+        self.textEdit.setObjectName("textEdit")
+        self.gridLayout_13.addWidget(self.textEdit, 0, 0, 1, 1)
+        self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
+        self.gridLayout_2.addWidget(self.scrollArea_3, 3, 0, 1, 1)
         self.comboBox = QtWidgets.QComboBox(self.tab)
         self.comboBox.setObjectName("comboBox")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.gridLayout_2.addWidget(self.comboBox, 1, 0, 1, 1)
-        self.label_2 = QtWidgets.QLabel(self.tab)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout_2.addWidget(self.label_2, 0, 0, 1, 1)
-        self.scrollArea_3 = QtWidgets.QScrollArea(self.tab)
-        self.scrollArea_3.setWidgetResizable(True)
-        self.scrollArea_3.setObjectName("scrollArea_3")
-        self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 1061, 458))
-        self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
-        self.textEdit = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_3)
-        self.textEdit.setGeometry(QtCore.QRect(3, 0, 1061, 481))
-        self.textEdit.setReadOnly(True)
-        self.textEdit.setObjectName("textEdit")
-        self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
-        self.gridLayout_2.addWidget(self.scrollArea_3, 3, 0, 1, 1)
         self.gridLayout_5.addLayout(self.gridLayout_2, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab, "")
         self.tab_2 = QtWidgets.QWidget()
@@ -135,7 +137,7 @@ class Ui_MainWindow(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollArea_4.setObjectName("scrollArea_4")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1061, 458))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 798, 469))
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.scrollArea_4.setWidget(self.scrollAreaWidgetContents_4)
         self.gridLayout_3.addWidget(self.scrollArea_4, 3, 0, 1, 1)
@@ -167,12 +169,14 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1063, 350))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 800, 366))
         self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.gridLayout_15 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents)
+        self.gridLayout_15.setObjectName("gridLayout_15")
         self.textEdit_2 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents)
-        self.textEdit_2.setGeometry(QtCore.QRect(3, 0, 1061, 351))
         self.textEdit_2.setReadOnly(True)
         self.textEdit_2.setObjectName("textEdit_2")
+        self.gridLayout_15.addWidget(self.textEdit_2, 0, 0, 1, 1)
         self.scrollArea.setWidget(self.scrollAreaWidgetContents)
         self.gridLayout_7.addWidget(self.scrollArea, 4, 0, 1, 1)
         self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
@@ -213,11 +217,13 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1063, 350))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 800, 366))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
+        self.gridLayout_14 = QtWidgets.QGridLayout(self.scrollAreaWidgetContents_2)
+        self.gridLayout_14.setObjectName("gridLayout_14")
         self.textEdit_3 = QtWidgets.QTextEdit(self.scrollAreaWidgetContents_2)
-        self.textEdit_3.setGeometry(QtCore.QRect(-7, 0, 1071, 351))
         self.textEdit_3.setObjectName("textEdit_3")
+        self.gridLayout_14.addWidget(self.textEdit_3, 0, 0, 1, 1)
         self.scrollArea_2.setWidget(self.scrollAreaWidgetContents_2)
         self.gridLayout_8.addWidget(self.scrollArea_2, 3, 0, 1, 1)
         self.label_14 = QtWidgets.QLabel(self.tab_3)
@@ -249,23 +255,6 @@ class Ui_MainWindow(object):
         self.gridLayout_10.setObjectName("gridLayout_10")
         self.gridLayout_9 = QtWidgets.QGridLayout()
         self.gridLayout_9.setObjectName("gridLayout_9")
-        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.tab_5)
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.horizontalLayout_4.addWidget(self.lineEdit_4)
-        self.gridLayout_9.addLayout(self.horizontalLayout_4, 3, 0, 1, 1)
-        self.label_17 = QtWidgets.QLabel(self.tab_5)
-        self.label_17.setObjectName("label_17")
-        self.gridLayout_9.addWidget(self.label_17, 4, 0, 1, 1)
-        self.comboBox_3 = QtWidgets.QComboBox(self.tab_5)
-        self.comboBox_3.setObjectName("comboBox_3")
-        self.comboBox_3.addItem("")
-        self.comboBox_3.addItem("")
-        self.gridLayout_9.addWidget(self.comboBox_3, 1, 0, 1, 1)
-        self.pushButton_7 = QtWidgets.QPushButton(self.tab_5)
-        self.pushButton_7.setObjectName("pushButton_7")
-        self.gridLayout_9.addWidget(self.pushButton_7, 7, 0, 1, 1)
         self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
         self.lineEdit_5 = QtWidgets.QLineEdit(self.tab_5)
@@ -275,9 +264,29 @@ class Ui_MainWindow(object):
         self.pushButton_seg_img_dir.setObjectName("pushButton_seg_img_dir")
         self.horizontalLayout_5.addWidget(self.pushButton_seg_img_dir)
         self.gridLayout_9.addLayout(self.horizontalLayout_5, 5, 0, 1, 1)
+        self.label_17 = QtWidgets.QLabel(self.tab_5)
+        self.label_17.setObjectName("label_17")
+        self.gridLayout_9.addWidget(self.label_17, 4, 0, 1, 1)
+        self.comboBox_3 = QtWidgets.QComboBox(self.tab_5)
+        self.comboBox_3.setObjectName("comboBox_3")
+        self.comboBox_3.addItem("")
+        self.comboBox_3.addItem("")
+        self.gridLayout_9.addWidget(self.comboBox_3, 1, 0, 1, 1)
         self.label_15 = QtWidgets.QLabel(self.tab_5)
         self.label_15.setObjectName("label_15")
         self.gridLayout_9.addWidget(self.label_15, 2, 0, 1, 1)
+        self.label_16 = QtWidgets.QLabel(self.tab_5)
+        self.label_16.setObjectName("label_16")
+        self.gridLayout_9.addWidget(self.label_16, 0, 0, 1, 1)
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.lineEdit_4 = QtWidgets.QLineEdit(self.tab_5)
+        self.lineEdit_4.setObjectName("lineEdit_4")
+        self.horizontalLayout_4.addWidget(self.lineEdit_4)
+        self.gridLayout_9.addLayout(self.horizontalLayout_4, 3, 0, 1, 1)
+        self.pushButton_7 = QtWidgets.QPushButton(self.tab_5)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.gridLayout_9.addWidget(self.pushButton_7, 8, 0, 1, 1)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
         self.label_oriimg = QtWidgets.QLabel(self.tab_5)
@@ -288,12 +297,18 @@ class Ui_MainWindow(object):
         self.label_pred.setAlignment(QtCore.Qt.AlignCenter)
         self.label_pred.setObjectName("label_pred")
         self.horizontalLayout_6.addWidget(self.label_pred)
-        self.gridLayout_9.addLayout(self.horizontalLayout_6, 6, 0, 1, 1)
-        self.label_16 = QtWidgets.QLabel(self.tab_5)
-        self.label_16.setObjectName("label_16")
-        self.gridLayout_9.addWidget(self.label_16, 0, 0, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_9.addItem(spacerItem3, 8, 0, 1, 1)
+        self.gridLayout_9.addLayout(self.horizontalLayout_6, 7, 0, 1, 1)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_5 = QtWidgets.QLabel(self.tab_5)
+        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_5.setObjectName("label_5")
+        self.horizontalLayout.addWidget(self.label_5)
+        self.label_18 = QtWidgets.QLabel(self.tab_5)
+        self.label_18.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_18.setObjectName("label_18")
+        self.horizontalLayout.addWidget(self.label_18)
+        self.gridLayout_9.addLayout(self.horizontalLayout, 6, 0, 1, 1)
         self.gridLayout_10.addLayout(self.gridLayout_9, 0, 0, 1, 1)
         self.tabWidget.addTab(self.tab_5, "")
         self.gridLayout.addWidget(self.tabWidget, 5, 0, 1, 1)
@@ -336,7 +351,7 @@ class Ui_MainWindow(object):
         self.gridLayout_4.addLayout(self.gridLayout, 0, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1109, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 846, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -344,7 +359,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(5)
+        self.tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -355,76 +370,80 @@ class Ui_MainWindow(object):
         self.label_21.setText(_translate("MainWindow", "端口："))
         self.label_22.setText(_translate("MainWindow", "用户名："))
         self.label_23.setText(_translate("MainWindow", "密码："))
+        self.lineEdit_6.setText(_translate("MainWindow", "202.195.167.200"))
+        self.lineEdit_7.setText(_translate("MainWindow", "22"))
+        self.lineEdit_8.setText(_translate("MainWindow", "test"))
+        self.lineEdit_9.setText(_translate("MainWindow", "123456"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_6), _translate("MainWindow", "远程登录"))
-        self.label_3.setText(_translate("MainWindow", "模型参数"))
-        self.comboBox.setItemText(0, _translate("MainWindow", "CB-SCTC"))
-        self.comboBox.setItemText(1, _translate("MainWindow", "ITRL"))
         self.label_2.setText(_translate("MainWindow", "当前模型"))
+        self.label_3.setText(_translate("MainWindow", "模型参数"))
         self.textEdit.setHtml(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'Arial\'; font-size:15pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">batch_size: 64</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">epochs: 60</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">model: deit_small_MCTformerV1_patch16_224</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">input_size: 224</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">drop: 0.0</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">drop_path: 0.1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">opt: adamw</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">opt_eps: 1e-08</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">opt_betas: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">clip_grad: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">momentum: 0.9</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">weight_decay: 0.05</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">sched: cosine</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">lr: 0.0005</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">lr_noise: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">lr_noise_pct: 0.67</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">lr_noise_std: 1.0</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">warmup_lr: 1e-06</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">min_lr: 1e-05</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">decay_epochs: 30</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">warmup_epochs: 5</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">cooldown_epochs: 10</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">patience_epochs: 10</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">decay_rate: 0.1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">color_jitter: 0.4</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">aa: rand-m9-mstd0.5-inc1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">smoothing: 0.1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">train_interpolation: bicubic</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">repeated_aug: True</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">reprob: 0.25</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">remode: pixel</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">recount: 1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">resplit: False</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">loss_alpha: 0.4</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">shallow_block: 9</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">finetune: https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">data_path: /data/c425/tjf/datasets/VOC2012/</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">img_list: voc12</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">data_set: VOC12</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">output_dir: /data/c425/tjf/mct_mod33/for_gradute</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">device: cuda:1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">resume: </p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">start_epoch: 0</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">eval: False</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">num_workers: 10</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">pin_mem: True</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">gen_attention_maps: False</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">patch_size: 16</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">attention_dir: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">layer_index: 12</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">patch_attn_refine: False</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">visualize_cls_attn: False</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">gt_dir: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">cam_npy_dir: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">scales: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">label_file_path: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">attention_type: fused</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">out_crf: None</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">low_alpha: 1</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">high_alpha: 12</p>\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">sparsity: 0.7</p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">batch_size: 64</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">epochs: 60</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">model: deit_small_CBSCTC_patch16_224</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">input_size: 224</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">drop: 0.0</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">drop_path: 0.1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">opt: adamw</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">opt_eps: 1e-08</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">opt_betas: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">clip_grad: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">momentum: 0.9</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">weight_decay: 0.05</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">sched: cosine</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">lr: 0.0005</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">lr_noise: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">lr_noise_pct: 0.67</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">lr_noise_std: 1.0</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">warmup_lr: 1e-06</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">min_lr: 1e-05</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">decay_epochs: 30</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">warmup_epochs: 5</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">cooldown_epochs: 10</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">patience_epochs: 10</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">decay_rate: 0.1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">color_jitter: 0.4</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">aa: rand-m9-mstd0.5-inc1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">smoothing: 0.1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">train_interpolation: bicubic</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">repeated_aug: True</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">reprob: 0.25</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">remode: pixel</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">recount: 1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">resplit: False</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">loss_alpha: 0.4</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">shallow_block: 9</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">finetune: https://dl.fbaipublicfiles.com/deit/deit_small_patch16_224-cd65a155.pth</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">data_path: /data/c425/test/datasets/VOC2012/</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">img_list: voc12</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">data_set: VOC12</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">output_dir: /data/c425/test/mct_mod33/for_gradute</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">device: cuda:1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">resume: </span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">start_epoch: 0</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">eval: False</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">num_workers: 10</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">pin_mem: True</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">gen_attention_maps: False</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">patch_size: 16</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">attention_dir: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">layer_index: 12</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">patch_attn_refine: False</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">visualize_cls_attn: False</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">gt_dir: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">cam_npy_dir: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">scales: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">label_file_path: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">attention_type: fused</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">out_crf: None</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">low_alpha: 1</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">high_alpha: 12</span> </p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:18pt; color:#000000;\">sparsity: 0.7</span> </p></body></html>"))
+        self.comboBox.setItemText(0, _translate("MainWindow", "CB-SCTC"))
+        self.comboBox.setItemText(1, _translate("MainWindow", "ITRL"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "模型"))
         self.label_6.setText(_translate("MainWindow", "数据集预览"))
         self.comboBox_2.setItemText(0, _translate("MainWindow", "PASCAL VOC 2012"))
@@ -452,7 +471,7 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(_translate("MainWindow", "训练"))
         self.pushButton.setText(_translate("MainWindow", "暂停"))
         self.pushButton_4.setText(_translate("MainWindow", "终止"))
-        self.lineEdit_2.setText(_translate("MainWindow", "/data/c425/tjf/mct_mod33/results"))
+        self.lineEdit_2.setText(_translate("MainWindow", "/data/test/cbsctc/results"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_4), _translate("MainWindow", "训练"))
         self.label_10.setText(_translate("MainWindow", "测试进度"))
         self.label_12.setText(_translate("MainWindow", "测试日志"))
@@ -465,25 +484,26 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">  img_temp = cv2.cvtColor(img_temp, cv2.COLOR_BGR2RGB).astype(np.float)</p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">  2%|██                                                                                                                           | 24/1456 [00:29&lt;27:19,  1.14s/it]</p></body></html>"))
         self.label_14.setText(_translate("MainWindow", "参数文件路径"))
-        self.lineEdit_3.setText(_translate("MainWindow", "/data/c425/tjf/mct_mod33/results/block_10_alpha_0_7_sparsity_70/seg_save_aug/model_30.pth"))
+        self.lineEdit_3.setText(_translate("MainWindow", "/data/test/cbsctc/results/block_10_alpha_0_7_sparsity_70/seg_save_aug/model_30.pth"))
         self.pushButton_3.setText(_translate("MainWindow", "测试"))
         self.pushButton_5.setText(_translate("MainWindow", "终止"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "测试"))
-        self.lineEdit_4.setText(_translate("MainWindow", "/data/c425/tjf/mct_mod33/results/block_10_alpha_0_7_sparsity_70/seg_save_aug/model_30.pth"))
+        self.lineEdit_5.setText(_translate("MainWindow", "E:\\datasets\\stochastic_img\\person_plane.jpg"))
+        self.pushButton_seg_img_dir.setText(_translate("MainWindow", "浏览..."))
         self.label_17.setText(_translate("MainWindow", "图像文件"))
         self.comboBox_3.setItemText(0, _translate("MainWindow", "CB-SCTC"))
         self.comboBox_3.setItemText(1, _translate("MainWindow", "ITRL"))
-        self.pushButton_7.setText(_translate("MainWindow", "分割"))
-        self.lineEdit_5.setText(_translate("MainWindow", "E:\\datasets\\stochastic_img\\person_plane.jpg"))
-        self.pushButton_seg_img_dir.setText(_translate("MainWindow", "浏览..."))
         self.label_15.setText(_translate("MainWindow", "参数文件"))
+        self.label_16.setText(_translate("MainWindow", "模型"))
+        self.lineEdit_4.setText(_translate("MainWindow", "/data/test/cbsctc/results/block_10_alpha_0_7_sparsity_70/seg_save_aug/model_30.pth"))
+        self.pushButton_7.setText(_translate("MainWindow", "分割"))
         self.label_oriimg.setText(_translate("MainWindow", "原图"))
         self.label_pred.setText(_translate("MainWindow", "分割图"))
-        self.label_16.setText(_translate("MainWindow", "模型"))
+        self.label_5.setText(_translate("MainWindow", "原图"))
+        self.label_18.setText(_translate("MainWindow", "分割图"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_5), _translate("MainWindow", "语义分割"))
         self.label.setText(_translate("MainWindow", "弱监督语义分割系统"))
         self.label_7.setText(_translate("MainWindow", "当前模型：CB-SCTC"))
         self.label_8.setText(_translate("MainWindow", "当前数据集：PASCAL VOC 2012"))
         self.label_time.setText(_translate("MainWindow", "TextLabel"))
         self.label_remote_state.setText(_translate("MainWindow", "远程服务器已连接"))
-import resource
